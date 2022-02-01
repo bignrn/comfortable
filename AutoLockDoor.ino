@@ -165,16 +165,6 @@ void loop() {
   ////////////////
   if(dbEndTime != -9 && nowTime != -5 && !tFlg){
     if(nowTime >= (dbEndTime + LIMIT) && dbEndTime >= 0){
-      //
-      //過ぎてる時間が入った時は即閉める
-      //@1405 dbtime + limit < nowtime || nowtime == dbtime + limit
-      //@ :
-      //@ :
-      //@1400
-      //
-      //!(dbtime < 0)
-      //dbtime = 1400
-      //nowtime = 1400++
       Serial.println("\n=======================");
       Serial.println("鍵の確認作業に入ります。");
       Serial.println("=======================");
