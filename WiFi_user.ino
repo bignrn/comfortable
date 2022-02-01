@@ -20,7 +20,7 @@ static void wifi_clear(W_Connection* const w_this);
 
 static void wifi_clear(W_Connection* const w_this){
     //1~3号館
-    w_this -> ssid = "YOUR-SSD-KEY";      //ルーターのSSID
+    w_this -> ssid = "YOUR-SSID-KEY";      //ルーターのSSID
     w_this -> pass = "YOUR-PASSWORD-KEY"; //ルーターのパスワード
 }
 
