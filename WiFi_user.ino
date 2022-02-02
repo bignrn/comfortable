@@ -17,7 +17,7 @@ WiFiClientSecure client;
 //定数
 #define RECONE_MAX 15   //リコネクション回数
 #define YOUR_SSID_KEY "";       //ルーターのSSID
-#define YOUR_PASSWORD_KEY "4";  //ルーターのパスワード
+#define YOUR_PASSWORD_KEY "";  //ルーターのパスワード
 
 static void wifi_clear(W_Connection* const w_this);
 
