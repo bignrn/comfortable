@@ -2,6 +2,7 @@
 //関連ファイル：FireBase_Connection.h
 //
 //date  : 2021.11.30
+//name  : norarun
 //
 //用途:
 //FireBaseに接続。送信と取得を行いう。
@@ -20,6 +21,12 @@ WiFiClientSecure clients;
 
 //定数
 #define roomNo 1
+#define FIREBASSE_HOST_KEY "aaa";        // ホスト 例：test.firebasedatabase.app
+#define FIREBASE_SERCRET_PASSWORD "aaa"; // パスワード
+#define FIREBASE_ROOT_TAG_NAME "aaa";    // ルートパス
+#define WEB_ROOT_RSA_KEY \
+      "-----BEGIN CERTIFICATE-----\n" \
+      "-----END CERTIFICATE-----\n";  // AC認証
 
 //privateメソッド関数はstaticでスコープ隠蔽
 static void firebase_clear(FireBase_Connection* const p_this);
@@ -29,15 +36,10 @@ static void firebase_clear(FireBase_Connection* const p_this);
 static void firebase_clear(FireBase_Connection* const p_this){
   //第一引数に自分自身のインスタンスへのポインタ(this)が格納されるように呼び出すので
   //第一引数のポインタを経由してメンバ変数にアクセスします
-  p_this -> privateHOST = "FIREBASSE-HOST-KEY"; //例：test.firebasedatabase.app
-  p_this -> privateFB_AUTH = "FIREBASE-SERCRET-PASSWORD";
-  p_this -> privateUSER_PATH = "FIREBASE-ROOT-TAG-NAME";
-  p_this -> privateROOT_AC =  \
-      "-----BEGIN CERTIFICATE-----\n" \
-      
-      "     WEB-ROOT-RSA-KEY      \n" \
-      
-      "-----END CERTIFICATE----- \n";    
+  p_this -> privateHOST = FIREBASSE_HOST_KEY; //例：test.firebasedatabase.app
+  p_this -> privateFB_AUTH = FIREBASE_SERCRET_PASSWORD;
+  p_this -> privateUSER_PATH = FIREBASE_ROOT_TAG_NAME;
+  p_this -> privateROOT_AC = WEB_ROOT_RSA_KEY;    
 }//ルートAC認証書を貼り付ける。公開鍵
 
 //コンストラクタは自動生成されないため必ず定義します

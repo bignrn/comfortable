@@ -2,6 +2,7 @@
 //関連ファイル：WiFi_Connection.h
 //
 //date  : 2021.11.30
+//name  : norarun
 //
 //用途:
 //WiFiにつなげる処理を行う。
@@ -15,13 +16,15 @@ WiFiClientSecure client;
 
 //定数
 #define RECONE_MAX 15   //リコネクション回数
+#define YOUR_SSID_KEY "";       //ルーターのSSID
+#define YOUR_PASSWORD_KEY "4";  //ルーターのパスワード
 
 static void wifi_clear(W_Connection* const w_this);
 
 static void wifi_clear(W_Connection* const w_this){
     //1~3号館
-    w_this -> ssid = "YOUR-SSID-KEY";      //ルーターのSSID
-    w_this -> pass = "YOUR-PASSWORD-KEY"; //ルーターのパスワード
+    w_this -> ssid = YOUR_SSID_KEY;
+    w_this -> pass = YOUR_PASSWORD_KEY;
 }
 
 /**

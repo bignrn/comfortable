@@ -2,6 +2,7 @@
 //ヘッダーファイル：WiFi_Connection.h
 //
 //date  : 2021.11.30
+//name  : norarun
 //
 //用途:
 //WiFiに接続するための処理をするヘッダーファイル

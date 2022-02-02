@@ -2,6 +2,7 @@
 //ヘッダーファイル：FireBase_Connection.h
 //
 //date  : 2021.11.30
+//name  : norarun
 //
 //用途:
 //FireBaseに接続。送信と取得を行いうヘッダーファイル
