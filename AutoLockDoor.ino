@@ -166,16 +166,6 @@ void loop() {
   ////////////////
   if(dbEndTime != -9 && nowTime != -5 && !tFlg){
     if(nowTime >= (dbEndTime + LIMIT) && dbEndTime >= 0){
-      //
-      //過ぎてる時間が入った時は即閉める
-      //@1405 dbtime + limit < nowtime || nowtime == dbtime + limit
-      //@ :
-      //@ :
-      //@1400
-      //
-      //!(dbtime < 0)
-      //dbtime = 1400
-      //nowtime = 1400++
       Serial.println("\n=======================");
       Serial.println("鍵の確認作業に入ります。");
       Serial.println("=======================");
@@ -197,10 +187,7 @@ void loop() {
          * 送信methode 引数(コンストラクタ、key, val)
          * {" key " : " val "}
          */
-        if(!sendFireBase(&firebase,"lock",(String)mSitu)) ESP.restart();  //ミス時再起動
-        
-        //一度ファイヤーベースに登録が出来ているか確認
-        
+        if(!sendFireBase(&firebase,"lock",(String)mSitu)) ESP.restart();  //ミス時再起
         tFlg = true;  //DBが元に戻る
       }
       
